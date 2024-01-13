@@ -7,7 +7,7 @@
 }
 
 .navlink::after {
-  @apply absolute block w-0 h-[2px] bg-black rounded-full overflow-hidden;
+  @apply absolute block w-0 h-[2px] bg-black rounded-full overflow-hidden left-0;
 }
 
 .navlink.active {
@@ -16,6 +16,15 @@
 
 .nav-btn {
   @apply bg-black text-white px-3 py-1 rounded-full hover:bg-white hover:text-black transition-colors hover:outline hover:outline-black;
+}
+
+.navpanel {
+  @apply absolute top-full bg-white left-0 right-0 -translate-x-full transition-transform;
+  height: calc(100vh - 64px);
+}
+
+.navpanel.open {
+  @apply translate-x-0;
 }
 
 /* @media (prefers-color-scheme: dark) {

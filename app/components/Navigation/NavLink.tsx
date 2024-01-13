@@ -13,7 +13,6 @@ const NavLink = ({ label, href }: Props) => {
   const pathname = usePathname();
   return (
     <Link
-      key={href}
       href={href}
       className={classNames({
         "active": href === pathname
